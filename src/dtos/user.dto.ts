@@ -2,7 +2,7 @@ import { IsString, IsNotEmpty, IsDefined, IsEmail, IsNumber } from "class-valida
 
 export class CreateUserDto {
 
-    @IsNumber()
+    @IsNumber({}, {message: 'Id should be number'})
     @IsNotEmpty({ message: 'Id should not be empty/null' })
     id: number
 
